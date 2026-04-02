@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - Learning Website</title>
+  <script>
+    // Redirect to the new courses page
+    if (window.location.href.includes('Courses.html')) {
+      window.location.href = 'courses_new.php';
+    }
+  </script>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      margin: 0px;
+      padding: 0px;
+      background-image: url(Anuj.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0077ff;
+      padding: 15px 20px;
+      position: fixed;
+      width: 100%;
+    }
+
+    .logo {
+      color: rgb(245, 3, 3);
+      font-size: 45px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgb(173, 25, 28);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: rgb(237, 230, 230);
+      font-size: 30px;
+      padding: 10px 35px;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 28px;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    nav ul li a:hover {
+      color: red;
+    }
+
+    /*body */
+    .course-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+
+    }
+
+    h1 {
+      text-align: center;
+      justify-content: center;
+      font-size-adjust: none;
+      font-size: 35px;
+      text-shadow: 2px 2px 5px black;
+      padding: 40px;
+      color: blue;
+    }
+
+    .course {
+      width: 250px;
+      text-align: center;
+      background: white;
+      background-color: antiquewhite;
+      padding: 20px;
+      margin: 25px 0px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px red;
+    }
+
+    .course img {
+      text-align: center;
+      justify-content: center;
+      width: 200px;
+      height: 100px;
+
+    }
+
+    button {
+      padding: 8px 15px;
+      text-align: center;
+      justify-content: center;
+      background: blue;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Mobile */
+    @media(max-width:768px) {
+      .logo {
+        font-size: 35px;
+      }
+
+      .course {
+        width: 200px;
+        font-size: 10px;
+        padding: 10px;
+        margin: 15px 0px;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0077ff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo"> 👨‍🎓Learning website</div>
+    <ul class="nav-links" id="menu">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Courses.html">Courses</a></li>
+      <li><a href="index.html">Contact</a></li>
+    </ul>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </nav>
+  <br> <br> <br> <br>
+  <h1><i>Learning Courses</i></h1>
+  <div class="course-container">
+    <div class="course">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">
+      <h2>HTML<sub>Frontend</sub></h2>
+      <p>Learn the basics of website structure using HTML.</p>
+      <button>Start Course</button>
+    </div>
+
+    <div class="course">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png">
+      <h2>CSS<sub>Frontend</sub></h2>
+      <p>Learn how to design and style beautiful websites</p>
+      <button>Start Course</button>
+    </div>
+
+    <div class="course">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png">
+      <h2>JAVA SCRIPT<sub>Frontend</sub></h2>
+      <p>Learn how to make websites interactive</p>
+      <button>Start Course</button>
+    </div>
+
+    <div class="course">
+      <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png">
+      <h2>REACT JS<sub>Framework</sub></h2>
+      <p>Buildmodern web application using React</p>
+      <button type="submit">Start Course</button>
+    </div>
+
+    <div class="course">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png">
+      <h2>ANGULAR<sub>Framework</sub></h2>
+      <p>Framework used to bulit dynamic and interactive</p>
+      <button>Start Course</button>
+    </div>
+
+    <div class="course">
+      <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png">
+      <h2>C#<sub>backend</sub></h2>
+      <p>Framework used to bulit dynamic and interactive</p>
+      <button>Start Course</button>
+    </div>
+
+    <div class="course">
+      <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png">
+      <h2>C++<sub>backend</sub></h2>
+      <p>Framework used to bulit dynamic and interactive</p>
+      <button>Start Course</button>
+    </div>
+
+    <div class="course">
+      <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
+      <h2>JAVA<sub>backend</sub></h2>
+      <p>Framework used to bulit dynamic and interactive</p>
+      <button>Start Course</button>
+    </div>
+
+    <div class="course">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png">
+      <h2>Python<sub>backend</sub></h2>
+      <p>Framework used to bulit dynamic and interactive</p>
+      <button>Start Course</button>
+    </div>
+
+    <div class="course">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png">
+      <h2>PHP<sub>backend</sub></h2>
+      <p>Framework used to bulit dynamic and interactive</p>
+      <button>Start Course</button>
+    </div>
+
+    <div class="course">
+      <img src="https://cdn-icons-png.flaticon.com/512/528/528260.png">
+      <h3>MySQL<sub>Database</sub></h3>
+      <button>Start Course</button>
+    </div>
+
+    <div class="course">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png">
+      <h3>MongoDB<sub>Database</sub></h3>
+      <button>Start Course</button>
+    </div>
+
+    <div class="course">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png">
+      <h3>PostgreSQL<sub>Database</sub></h3>
+      <button>Start Course</button>
+    </div>
+  </div>
+  <script>
+    function toggleMenu() {
+      let menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
+</body>
+
+</html>
