@@ -1,434 +1,286 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anuj Singh Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: Arial;
+    }
 
-<style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      background-image: url(Anuj.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
+    /*Contact*/
+    .contact {
+      padding: 50px 20px;
+      text-align: center;
+    }
 
-/* Navbar */
+    .contact h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
 
-nav{
-background:#111;
-padding:15px 20px;
-position:fixed;
-width:100%;
-top:0;
-left:0;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
-}
+    .contact p {
+      margin-bottom: 30px;
+      color: gray;
+    }
 
-.logo{
-color:red;
-font-size:40px;
-font-weight:bold;
-}
+    .contact-box {
+      max-width: 350px;
+      height: auto;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-nav ul{
-list-style:none;
-display:flex;
-gap:20px;
-}
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 10px;
+    }
 
-nav ul li a{
-text-decoration:none;
-color:rgb(245, 242, 242);
-font-size:30px;
-font-weight:bold;
-}
+    label {
+      font-size: 10px;
+      float: left;
+    }
 
-nav ul li a:hover{
-color:red;
-}
+    form textarea {
+      height: 80px;
+      resize: none;
+    }
 
-.menu-icon{
-display:none;
-font-size:28px;
-color:white;
-cursor:pointer;
-}
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: #007BFF;
+      color: white;
+      font-size: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
 
-/* Section */
+    button:hover {
+      background: #0056b3;
+    }
 
-section{
-padding:100px 20px;
-min-height:100vh;
-text-align:center;
-}
+    /*navbar*/
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0077ff;
+      padding: 15px 20px;
+      position: fixed;
+      width: 100%;
+    }
 
-/* Home */
+    .logo {
+      color: rgb(245, 3, 3);
+      font-size: 45px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgb(173, 25, 28);
+    }
 
-#home{
-background:#4e5d94;
-display:flex;
-justify-content:space-around;
-align-items:center;
-flex-wrap:wrap;
-}
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+    }
 
-.left{
-max-width:500px;
-}
+    .nav-links a {
+      text-decoration: none;
+      color: rgb(237, 230, 230);
+      font-size: 30px;
+      padding: 10px 35px;
+    }
 
-.left h3{
-font-size:45px;
-color:red;
-margin-bottom:20px;
-}
+    .menu-icon {
+      display: none;
+      font-size: 28px;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
 
-.left p{
-font: size 20px;
-margin-bottom:15px;
-}
+    nav ul li a:hover {
+      color: red;
+    }
 
-.left ul{
-font-size:17px;
-margin-bottom:20px;
-}
+    /*Contact
+         .Contact h1{
+          text-align: center;
+          color: rgb(63, 18, 243);
+          padding: 100px 0px 10px 0px;
+          text-shadow: 2px 2px 5px rgb(10, 10, 10);
+         }*/
+    .Contact h1 {
+      display: block;
+      font-size: 2em;
+      color: rgb(82, 38, 227);
+      margin-block-start: 0px;
+      margin-block-end: 25px;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+      unicode-bidi: isolate;
+      text-shadow: 2px 2px 5px rgb(10, 10, 10);
+    }
 
-.left button{
-padding:10px 20px;
-font-size:18px;
-background:#0831d3;
-color:white;
-border:none;
-border-radius:20px;
-cursor:pointer;
-}
+    .Contact p {
+      text-align: center;
+      font-size: 20px;
+      color: black;
+      padding: 1px;
+    }
 
-.right img{
-width:370px;
-border-radius:10px;
-}
+    .contact h3 {
+      padding: 0px 0px 25px 0px;
+      font-size: 30px;
+      color: red;
+      text-shadow: 2px 2px 5px rgb(201, 23, 23);
+    }
 
-/* About */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
 
-#about{
-background:#e6f0ff;
-}
+    /* Mobile */
+    @media(max-width:768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0077ff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
 
-.about-container{
-max-width:900px;
-margin:auto;
-}
+      .nav-links.show {
+        display: flex;
+      }
 
-.about h2{
-padding:20px 0px 50px 0px;
-font-size:35px;
-color: red;
-margin-bottom:20px;
-}
+      .menu-icon {
+        display: block;
+      }
 
-.skills-box{
-margin-top:30px;
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
-}
+      .contact h2 {
+        font-size: 20px;
+      }
 
-.About-img img{
-width:350px;
-margin-top:20px;
-border-radius:10px;
-}
-
-/* Experience */
-
-#experience{
-background:#fff0e6;
-}
-
-.con{
-max-width:400px;
-background:white;
-margin:20px auto;
-padding:20px;
-border-radius:20px;
-box-shadow:0 0 15px rgba(0,0,0,0.2);
-}
- #experience h1{
-    padding:20px 0px 50px 0px;
-    color: red;
- }
-.con h4{
-color:blue;
-margin-bottom:10px;
-}
-
-/* Projects */
-
-#projects{
-background:#b8d5b8;
-}
-
-.box{
-max-width:350px;
-border:2px solid black;
-background-color: rgb(121, 146, 167);
-border-radius:10px;
-margin:20px auto;
-padding:10px;
-}
-
-.box img{
-width:100%;
-height:200px;
-object-fit:cover;
-border-radius:10px;
-}
-
-.name{
-margin-top:10px;
-font-size:20px;
-font-weight:bold;
-}
-#projects h1{
-    padding:20px 0px 50px 0px;
-    color: red;
-}
-
-/* Contact */
-
-#contact{
-background:#ffe6f2;
-}
-#contact h1{
-    padding:20px 0px 50px 0px;
-    color: red;
-}
-
-.contact a{
-color:blue;
-text-decoration:none;
-}
-.think b{
-    font-size: 30px;
-    color: red; 
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-nav ul{
-display:none;
-flex-direction:column;
-background:#222;
-position:absolute;
-top:60px;
-left:0;
-width:100%;
-text-align:center;
-}
- /*.left h3{
-
-}*/
-nav ul.show{
-display:flex;
-}
-.menu-icon{
-display:block;
-}
-#home{
-flex-direction:column;
-}
-.projects{
-flex-direction:column;
-}
-}
-
-</style>
+      .contact-box {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <nav class="navbar">
+    <div class="logo"> 👨‍🎓Learning website</div>
+    <ul class="nav-links" id="menu">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Course.html">Courses</a></li>
+      <li><a href="index.html">Contact</a></li>
+      <!--<li><a href="logi.html">Login</a></li>-->
+    </ul>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </nav><br> <br> <br><br>
+  <section class="Contact">
 
-<nav>
-<div class="logo">Portfolio</div>
+    <h1><i>Contact Me</i></h1>
+    <div class="contact-box">
+      <form method="POST" action="index.php">
+        <h3>Student Form</h3>
 
-<ul id="menu">
-<li><a href="#about">About</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+        <label>Name :</label>
+        <input type="text" name="name" placeholder="Name" required><br>
 
-<div class="menu-icon" onclick="toggleMenu()">☰</div>
-</nav>
+        <label>Email :</label>
+        <input type="email" name="email" placeholder="Enter Email" required><br>
 
+        <label>Phone-number :</label>
+        <input type="tel" name="phone" placeholder="Phone-number" required><br>
 
-<!-- Home -->
+        <label>Course :</label>
+        <select name="course">
+          <option>Frontend</option>
+          <option>Backend</option>
+        </select><br>
+        <label>Message :</label>
+        <textarea name="message" placeholder="Message"></textarea><br>
 
-<section id="home">
+        <button type="submit" name="login">Submit</button>
+      </form>
+    </div>
+  </section>
+  <script>
+    function saveData(e) {
+      e.preventDefault();
+      let data = {
+        name:
+          document.getElementById("name").value,
+        email:
+          document.getElementById("email").value,
+        phone:
+          document.getElementById("phone").value,
+        course:
+          document.getElementById("course").value,
+        message:
+          document.getElementById("message").value
+      };
 
-<div class="left">
-<h3>Hi, I'm Anuj Singh</h3>
-<p>This is my official Portfolio Website.</p>
+      localStorage.setItem("studentData", JSON.stringify(data));
+      document.getElementById("msg").innerHTML = "From Sumitted Successfully!";
+    }
+  </script>
 
-<ul>
-<li>Full Stack Developer - 6 Month Internship</li>
-<li>SQL Developer - 3 Month Internship</li>
-<li>Good knowledge of Frontend Development</li>
-</ul>
-
-<a href="Front.pdf" download>
-<button>Download Resume</button>
-</a><br><br>
-
-</div>
-
-<div class="right">
-<img src="A.jpeg" alt="profile">
-</div>
-
-</section>
-
-
-<!-- About -->
-
-<section id="about" class="about">
-
-<div class="about-container">
-
-<h2>About Me</h2>
-
-<p>
-I am a passionate and dedicated Frontend Developer (Fresher) with strong
-foundation in HTML, CSS, and JavaScript.
-</p>
-
-<p>
-My goal is to start my career in a reputed IT company where I can enhance
-my skills and contribute to real-world projects.
-</p>
-
-<div class="skills-box">
-
-<h3>Skills</h3>
-
-<p><b>Frontend :</b> HTML | CSS | JavaScript</p>
-<p><b>Backend :</b> Core Java | Advanced Java | PHP</p>
-<p><b>Tools :</b> SSMS | MS Word | MS Excel</p>
-<p><b>Database :</b> SQL Server | MySQL | Oracle</p>
-
-</div>
-
-<div class="About-img">
-<img src="Anuj.jpeg">
-</div>
-
-</div>
-
-</section>
-
-
-<!-- Experience -->
-
-<section id="experience">
-
-<h1>Experience</h1>
-
-<div class="con">
-
-<h4>Full Stack Developer - Ducat Pvt. Ltd</h4>
-
-<p>Sep 2024 - Mar 2025</p>
-
-<p>
-Learning real-time coding<br>
-Java Full Stack Development
-</p>
-
-</div><br>
-
-<div class="con">
-
-<h4>DiSGen International Pvt. Ltd</h4>
-
-<p>May 2025 - Aug 2025</p>
-
-<p>
-Worked as SQL Developer<br>
-Real-world projects
-</p>
-
-</div>
-
-</section>
-<!-- Projects -->
-
-<section id="projects">
-    <div class="projects">
-
-<h1>My Projects</h1>
-
-<!--<div class="box">
-<img src="Movies.jpg">
-<div class="name">Movie Website</div>
-</div>-->
-
-<div class="box">
-<img src="Learn.png">
-<div class="name">Online Learning Website</div>
-</div>
-
-<div class="box">
-<img src="SBI.png">
-<div class="name">State Bank of India</div>
-</div>
-</div>
-</section>
-
-<!-- Contact -->
-
-<section id="contact">
-<h1>Contact Me</h1> 
-
-<p>
-Phone:+91 9519211277<br><br>
-
-Email: akashsingh25262526@gmail.com<br><br>
-
-Facebook:
-
-<a href="https://www.facebook.com/share/1B2PdeJqz9/">My Facebook</a><br><br>
-
-Instagram :
-<a href="https://www.instagram.com/_____anujsingh_____95?igsh=MXZ0NDM1ZmdtaHJ5bw==">My Instagram</a><br><br>
-
-
-Github:
-
-<a href="https://github.com/Anujsingh95/My_Portfolio.git">My Github</a><br><br>
-
-Linkedln:
-<a href="https://www.linkedin.com/in/anuj-singh-b1a00b256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">My Linkedin</a>
-</p>
-
-<br>
-<div class="think">
-<b><i>Think You</i></b>
-</div>
-</section>
-
-<script>
-
-function toggleMenu(){
-let menu=document.getElementById("menu");
-menu.classList.toggle("show");
-}
-
-</script>
-
+  <div class="Contac">
+    <footer id="Contac">
+      <h1>Contact Us Page</h1>
+      <p><b>Name:</b>Er.Anuj Singh<br>
+        <b>Phone number:</b>+91-9519211277<br>
+        <b>Email:</b> akashsingh25262526@gmail.com<br>
+        <b>Address:</b> Mundera urf baluvhi Deoria (U.P.)
+      </p><br>
+      <p>2026 My Website | All Rights Reserved ?</p>
+    </footer>
+  </div>
+  <script>
+    function toggleMenu() {
+      let menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
 </body>
+
 </html>
