@@ -1,0 +1,212 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      margin: 0px;
+      padding: 0px;
+      background-image: url(Anuj.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0077ff;
+      padding: 15px 20px;
+      position: fixed;
+      width: 100%;
+    }
+
+    .logo {
+      color: rgb(245, 3, 3);
+      font-size: 45px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgb(173, 25, 28);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: rgb(237, 230, 230);
+      font-size: 30px;
+      padding: 10px 35px;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 28px;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    nav ul li a:hover {
+      color: red;
+    }
+
+    /*body*/
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 100px 50px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size-adjust: none;
+      font-size: 30px;
+      text-shadow: 2px 2px 5px black;
+      padding: 40px;
+      color: blue;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 30px;
+      text-shadow: 2px 2px 5px black;
+      color: rgb(239, 17, 17);
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .box {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 20px;
+      box-shadow: 0 0 20px red;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    /* Mobile */
+    @media(max-width:768px) {
+      .logo {
+        font-size: 35px;
+      }
+
+      h1 {
+        font-size: 17px;
+      }
+
+      .container h2 {
+        font-size: 20px;
+      }
+
+      .container p {
+        font-size: 15px;
+      }
+
+      .box h2 {
+        font-size: 20px;
+      }
+
+      .box ul {
+        font-size: 12px;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0077ff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo"> 👨‍🎓Learning website</div>
+    <ul class="nav-links" id="menu">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Course.html">Courses</a></li>
+      <li><a href="index.html">Contact</a></li>
+    </ul>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="container">
+    <h1><i>Learning Website Information</i></h1>
+    <div class="box">
+      <h2>What is the Website</h2>
+      <p>A website is a collection of web pages available on the internet.
+        It can be opened using a web browser such as <i><b> Chrome, Edge, or Firefox. </b></i>
+        A website contains information like text, images, videos, and links that
+        users can access from anywhere using a computer, laptop, or mobile phone.</p>
+    </div>
+    <div class="box">
+      <h2>Why is the Website Created?</h2>
+      <p>A website is created to provide information, services, and learning
+        resources to users online. It helps people access knowledge easily
+        from anywhere through the internet.</p>
+    </div>
+    <div class="box">
+      <h2>Benefits for Students</h2>
+      <ul>
+        <b><i>
+            <li>📚 Learn new skills and subjects.</li>
+            <li>💻 Study from home using the internet</li>
+            <li>⏰ Learn anytime and anywhere</li>
+            <li>📱 Use the website on mobile or laptop</li>
+            <li>🚀 Improve knowledge and career opportunities</li>
+          </i></b>
+      </ul>
+    </div>
+    <div class="box">
+      <h2>Courses Available</h2>
+      <ul>
+        <b><i>
+            <li>Html Css JavaScript React Angular etc</li>
+            <li>Java Python PHP C# C++etc</li>
+            <li>MySQL MongoDB PostgreSQL etc</li>
+          </i></b>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+
+    function toggleMenu() {
+      let menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
+</body>
+
+</html>
