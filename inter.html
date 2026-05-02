@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Startup engineer</div>
+
+        <ul id="menu">
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <!--<li><a href="#services" onclick="toggleMenu()">Services</a></li>-->
+            <li><a href="#Contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!--Home-->
+    <section id="home">
+        <div class="left">
+            <div class="left1">
+                <h3>Welcome to <span style="color: #ff00c8;">
+                        <b>Startup engineer</b></span></h3>
+                <p>I am a <b><span style="color: #ff5733;">Startup engineer</span></b> focused on transforming ideas
+                    into real-world, revenue-generating businesses.
+                    My work sits at the intersection of creativity, technology, and execution—where concepts evolve into
+                </p>
+                <p>I specialize in taking early-stage ideas from zero to one: validating concepts, building prototypes,
+                    developing scalable systems, and launching them into the market. From identifying problems worth
+                    solving to crafting efficient solutions, I work hands-on across the entire startup lifecycle.
+                </p>
+            </div>
+        </div>
+        </div>
+        <div class="right">
+            <img src="Anuj.jpg.jpeg" alt="profile">
+        </div>
+    
+        <!--Services-->
+        <div class="features">
+            <h2>My Services</h2>
+            <div class="feature-box">
+                <div class="card">
+                    <h3>💡 Idea Validation</h3>
+                    <p>I help you test your startup idea and check if it works in real market.</p>
+                </div>
+
+                <div class="card">
+                    <h3>⚙️ Prototype Building</h3>
+                    <p>I build working models (prototypes) to turn your idea into a real product.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🚀 Launch Support</h3>
+                    <p>I help you launch your product and make it ready for real users.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--about-->
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about-container">
+
+            <div class="about-image">
+                <img src="growth.jpeg" alt="About Me">
+            </div>
+
+            <div class="about-text">
+                <h3>Who I Am</h3>
+                <p>I am a passionate Startup Engineer dedicated to transforming innovative ideas into successful
+                    businesses.</p>
+
+                <p>My approach is simple—build fast, learn faster, and iterate based on real feedback.
+                    I believe that great startups are not just built on ideas, but on execution,
+                    adaptability, and a deep understanding of users.</p>
+
+                <h4>What I Do</h4>
+                <ul>
+                    <li>✓ Business Idea Validation</li>
+                    <li>✓ Product Prototype Development</li>
+                    <li>✓ Startup Launch & Growth</li>
+                    <li>✓ Technical Consulting</li>
+                </ul><br>
+                <ul>
+                    <li><span style="color: rgb(220, 106, 106);">Mission:</span> Turn ideas into income.</li>
+                    <li><span style="color: rgb(220, 106, 106);">Focus:</span> Innovation, execution, and growth.</li>
+                    <li><span style="color: rgb(220, 106, 106);">Vision:</span> Build Startups that the world recognizes and uses.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+     <footer id="Contact">
+        <h1>Contact Me</h1>
+        <p>
+            Phone:
+            <a href="tel: 8851181491" style=" color: white; text-decoration: none;"> 8851181491 </a><br>
+
+            Email:
+            <a href="mailto: startup.engineer01@gmail.com"
+                style=" color: white; text-decoration: none;">startup.engineer01@gmail.com</a><br>
+
+            <a href="https://www.instagram.com/startup_engineer?igsh=a3h2dWRrMnA4dGs4"
+                style=" color: white; text-decoration: none;">
+                Instagram</a>
+        </p>
+        <br>
+        <div class="think">
+            <b><i>Think You All of</i></b>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            let menu =
+                document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+    </script>
+</body>
+
+</html>
